@@ -10,3 +10,5 @@ Add shortcut
 * Cut ^X
 * Paste ^V
 * Select All ^A
+
+More options to setup here: https://medium.com/@laclementine/dotfile-for-mac-efe082ad0d6a
