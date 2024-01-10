@@ -11,3 +11,14 @@ echo '{
 "$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Shift + Ctrl + Home */
 "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:"; /* Shift + Ctrl + End */
 }' > $HOME/Library/KeyBindings/DefaultKeyBinding.dict
+
+
+# FINDER #
+# Show all filename extensions
+sudo defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Show path bar
+sudo defaults write com.apple.finder ShowPathbar -bool true
+# Show status bar
+sudo defaults write com.apple.finder ShowStatusBar -bool true
+# Restart finder to apply settings
+killall Finder
