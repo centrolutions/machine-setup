@@ -176,3 +176,7 @@ I have used Windows for a long time and use a Windows keyboard with my Mac, so I
   "^$u" = (uppercaseWord:, moveForward:, moveForward:);
 }
 ```
+Want to see the default / system keybindings? Run this command in the terminal:
+```
+plutil -convert xml1 /System/Library/Frameworks/AppKit.framework/Resources/StandardKeyBinding.dict -o -|pl|grep -v noop:|ruby -pe'$_.gsub!(/[^ -~\n]/){"\\U%04x"%$&.ord}'
+```
