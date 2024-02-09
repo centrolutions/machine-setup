@@ -1,15 +1,26 @@
 #! /bin/bash
 mkdir -p $HOME/Library/KeyBindings
 echo '{
-/* Remap Home / End keys to be correct */
-"\UF729" = "moveToBeginningOfLine:"; /* Home */
-"\UF72B" = "moveToEndOfLine:"; /* End */
-"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; /* Shift + Home */
-"$\UF72B" = "moveToEndOfLineAndModifySelection:"; /* Shift + End */
-"^\UF729" = "moveToBeginningOfDocument:"; /* Ctrl + Home */
-"^\UF72B" = "moveToEndOfDocument:"; /* Ctrl + End */
-"$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Shift + Ctrl + Home */
-"$^\UF72B" = "moveToEndOfDocumentAndModifySelection:"; /* Shift + Ctrl + End */
+  "\UF729"  = "moveToBeginningOfLine:";				// home
+  "\UF72B"  = "moveToEndOfLine:";				// end
+
+  "$\UF729" = "moveToBeginningOfLineAndModifySelection:";	// shift-home
+  "$\UF72B" = "moveToEndOfLineAndModifySelection:";		// shift-end
+
+  "^\UF729" = "moveToBeginningOfDocument:";			//ctrl-home
+  "^\UF72B" = "moveToEndOfDocument:";				//ctrl-end
+
+  "^$\UF729" = "moveToBeginningOfDocumentAndModifySelection:";	//ctrl-shift-home
+  "^$\UF72B" = "moveToEndOfDocumentAndModifySelection:";	//ctrl-shift-end
+
+  "^c" = "copy:";						//ctrl-c
+  "^v" = "paste:";						//ctrl-v
+  "^x" = "cut:";						//ctrl-x
+
+  "^z" = "undo:";						//ctrl-z
+  "^$z" = "redo:";						//ctrl-shift-z
+
+  "^a" = "selectAll:";						//ctrl-a
 }' > $HOME/Library/KeyBindings/DefaultKeyBinding.dict
 
 brew install --cask flycut
