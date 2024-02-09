@@ -12,6 +12,7 @@ echo '{
 "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:"; /* Shift + Ctrl + End */
 }' > $HOME/Library/KeyBindings/DefaultKeyBinding.dict
 
+brew install --cask flycut
 
 # FINDER #
 # Show all filename extensions
